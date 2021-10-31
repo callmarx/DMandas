@@ -1,0 +1,42 @@
+version: '3.5'
+
+x-networks-service-template: &networks
+  networks:
+    - app
+
+x-env-service-template: &environment
+  DATABASE_URL: postgresql://postgres:postgres@dmandas-db-container/dmandas_development
+
+services:
+  app:
+    container_name: dmandas-container
+    build: .
+    <<: *networks
+    volumes:
+      - .:/app
+      - bundle:/bundle
+    ports:
+      - 3001:3000
+    depends_on:
+      - db
+    environment:
+      <<: *environment
+
+  db:
+    image: postgres
+    container_name: dmandas-db-container
+    command: -c fsync=off --client-min-messages=warning
+    <<: *networks
+    volumes:
+      - db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+networks:
+  app:
+    name: app
+    driver: bridge
+
+volumes:
+  db:
+  bundle:
