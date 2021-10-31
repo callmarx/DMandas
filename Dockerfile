@@ -21,6 +21,8 @@ RUN apk add --update --no-cache \
       openssl \
       pkgconfig \
       postgresql-dev \
+      nodejs \
+      yarn \
       tzdata
 
 RUN mkdir -p /app
