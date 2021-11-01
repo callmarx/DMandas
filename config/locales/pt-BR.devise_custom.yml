@@ -1,0 +1,29 @@
+pt-BR:
+  dictionary:
+    new: &new
+      title: Esqueceu sua senha?
+      subtitle: Digite o e-mail da sua conta abaixo e clique em enviar instruções. Nós lhe enviaremos um link para redefinir sua senha
+  devise:
+    passwords:
+      new:
+        <<: *new
+        email: Informe seu e-mail
+        submit: Enviar instruções
+        login: Eu sei minha senha
+      create:
+        <<: *new
+      edit:
+        title: Informe sua nova senha
+        new_password: Nova senha
+        password_confirmation: Confirmação de senha
+        submit: Alterar minha senha
+        login: Acessar sem mudar a senha
+    sessions:
+      new:
+        title: Seja bem-vindo
+        subtitle: Informe seus dados para acessar sua conta
+        remember_me: Mantenha-me conectado
+        forgot: Esqueceu sua senha?
+        submit: Acessar
+        email: E-mail
+        password: Senha
