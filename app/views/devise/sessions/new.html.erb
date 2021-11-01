@@ -1,29 +1,27 @@
-<div class="bg-white w-96 shadow-xl rounded p-6" >
-  <h1 class="text-center text-3xl font-bold leading-normal"><%= t(".title") %></h1>
-  <p class="text-center text-sm"><%=t(".subtitle") %></p>
+<div class="bg-yellow-500 bg-opacity-25 w-96 shadow-xl rounded p-6" >
+  <h1 class="text-gray-800 text-center text-3xl font-bold leading-normal"><%= t(".title") %></h1>
+  <p class="text-gray-700 text-center text-sm"><%=t(".subtitle") %></p>
   </br>
-  <%= form_for(resource,
-               as: resource_name,
-               url: session_path(resource_name)) do |f| %>
-    <div class="mb-4 relative">
-      <%= f.email_field :email, class: "w-full h-12 border border-gray-800 rounded px-3", autofocus: true, autocomplete: "email", placeholder: t(".email") %>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="mb-4">
+      <%= f.email_field :email, class: "w-full h-12 border-gray-800 rounded px-3", autofocus: true, autocomplete: "email", placeholder: t(".email") %>
     </div>
 
-    <div class="mb-4 relative">
-      <%= f.password_field :password, class: "w-full h-12 border border-gray-800 rounded px-3", autocomplete: "current-password", placeholder: t(".password") %>
+    <div class="mb-4">
+      <%= f.password_field :password, class: "w-full h-12 border-gray-800 rounded px-3", autocomplete: "current-password", placeholder: t(".password") %>
     </div>
 
-    <div class="my-auto relative font-medium text-gray-800 rounded-full p-2">
-      <%= f.check_box :remember_me %>
-      <%= f.label t(".remember_me") %>
+    <div class="my-auto inline-flex font-medium font-semibold text-gray-800 rounded-full p-2">
+      <%= f.check_box :remember_me, class: "w-5 h-5", style:"transition: all 0.15s ease 0s;" %>
+      <%= f.label t(".remember_me"), class: "ml-2" %>
     </div>
 
-    <div class="my-auto relative">
-      <%= link_to t(".forgot"), new_password_path(resource_name), class: "font-medium text-green-700 hover:bg-green-300 rounded-full p-2" %>
+    <div class="my-auto font-medium font-semibold text-gray-800">
+      <%= link_to t(".forgot"), new_password_path(resource_name), class: "hover:bg-gray-300 rounded-full p-2" %>
     </div>
 
-    <div class="mt-4 relative">
-      <%= f.button t(".submit"), type: "submit", class: "text-center w-full bg-green-500 hover:bg-green-700 rounded-full text-white py-3 font-medium" %>
+    <div class="mt-4">
+      <%= f.button t(".submit"), type: "submit", class: "text-center w-full bg-gray-700 hover:bg-gray-900 rounded-full text-white py-3 font-medium" %>
     </div>
   <% end %>
 
