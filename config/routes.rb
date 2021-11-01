@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root to: "welcome#index"
   authenticate :user do
-    root to: "welcome#index"
+    get '/test', to: "welcome#test"
   end
 end
