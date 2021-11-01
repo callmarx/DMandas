@@ -162,8 +162,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    tailwindcss-rails (0.5.1)
-      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -189,7 +187,7 @@ GEM
     zeitwerk (2.5.1)
 
 PLATFORMS
-  x86_64-linux
+  x86_64-linux-musl
 
 DEPENDENCIES
   bootsnap (>= 1.4.4)
@@ -203,7 +201,6 @@ DEPENDENCIES
   rails (~> 6.1.4)
   sass-rails (>= 6)
   spring
-  tailwindcss-rails (~> 0.5.1)
   turbolinks (~> 5)
   web-console (>= 4.1.0)
   webpacker (~> 5.0)
