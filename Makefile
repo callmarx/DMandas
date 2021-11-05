@@ -1,3 +1,9 @@
+ifneq (,$(findstring src/,$(MAKECMDGOALS)))
+	MAKECMDGOALS := $(subst src/,,$(MAKECMDGOALS))
+endif
+
+MAKEFLAGS += -s
+
 up:
 	docker-compose up --build app
 
