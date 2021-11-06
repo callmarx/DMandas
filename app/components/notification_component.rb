@@ -23,7 +23,7 @@ class NotificationComponent < ViewComponent::Base
       when "success"
         "fas fa-check-circle"
       when "error"
-        "fas fa-exclamation-circle"
+        "fas fa-exclamation-triangle"
       when "alert"
         "fas fa-exclamation-circle"
       else
@@ -36,11 +36,11 @@ class NotificationComponent < ViewComponent::Base
       when "success"
         "text-green-400"
       when "error"
-        "text-red-400"
+        "text-yellow-400"
       when "alert"
         "text-red-400"
       else
-        "text-gray-400"
+        "text-blue-300"
       end
     end
 end
