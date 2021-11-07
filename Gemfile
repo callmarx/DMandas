@@ -16,6 +16,7 @@ gem "redis", "~> 4.0"
 gem "devise"
 gem "hotwire-rails"
 gem "view_component", require: "view_component/engine"
+gem "tailwindcss-rails", "~> 0.5.1"
 
 gem "bootsnap", ">= 1.4.4", require: false
 
