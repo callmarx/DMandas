@@ -10,6 +10,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "channels"
 import "stylesheets/application"
+import "trix"
+import "@rails/actiontext"
 
 Rails.start()
 ActiveStorage.start()
