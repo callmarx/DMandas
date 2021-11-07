@@ -21,7 +21,6 @@ gem "bootsnap", ">= 1.4.4", require: false
 
 group :development, :test do
   gem "byebug"
-  gem "pry-rails"
   gem "rspec-rails", "~> 4.0.0"
 end
 

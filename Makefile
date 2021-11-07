@@ -5,7 +5,7 @@ endif
 MAKEFLAGS += -s
 
 up:
-	docker-compose up --build app
+	docker-compose up app
 
 exec:
 	docker-compose exec app bundle exec $(filter-out $@, $(MAKECMDGOALS))
