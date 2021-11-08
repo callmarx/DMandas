@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-yellow-500 bg-opacity-20 h-screen overflow-hidden flex flex-col space-y-10 justify-center items-center">
+  <body class="bg-yellow-500 bg-opacity-20 overflow-auto flex flex-col space-y-10 justify-center items-center">
     <%= render 'shared/flash_notifications' %>
-    <div class="fixed z-0">
-      <%= yield %>
-    </div>
+      <main class="container z-0 mx-auto mt-28 px-5 flex">
+        <%= yield %>
+      </main>
   </body>
 </html>
