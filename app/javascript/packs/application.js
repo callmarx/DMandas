@@ -13,3 +13,6 @@ import "stylesheets/application"
 
 Rails.start()
 ActiveStorage.start()
+
+require("trix")
+require("@rails/actiontext")

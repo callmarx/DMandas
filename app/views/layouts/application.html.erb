@@ -12,12 +12,10 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-yellow-500 bg-opacity-20 h-screen overflow-hidden flex flex-col space-y-10 justify-center items-center">
+  <body class="bg-yellow-500 bg-opacity-20 overflow-auto flex flex-col space-y-10 justify-center items-center">
     <%= render 'shared/flash_notifications' %>
-    <div class="fixed z-0">
-    <main class="container mx-auto mt-28 px-5 flex">
+      <main class="container z-0 mx-auto mt-28 px-5 flex">
         <%= yield %>
-    </main>
-    </div>
+      </main>
   </body>
 </html>
