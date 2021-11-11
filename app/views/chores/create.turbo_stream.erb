@@ -1,15 +1,14 @@
 <% if @chore.errors.present? %>
   <% @chore.errors.each do |error| %>
-    <%= turbo_stream.append 'flash-notifications' do %>
+    <%= turbo_stream.append "flash-notifications" do %>
       <%= render NotificationComponent.new(type: "error" , data: error.full_message) %>
     <% end %>
   <% end %>
 <% else %>
-  <%= turbo_stream.append 'flash-notifications' do %>
+  <%= turbo_stream.append "flash-notifications" do %>
     <% flash.each do |type, msg| %>
       <%= render NotificationComponent.new(type: type, data: msg) %>
     <% end %>
   <% end %>
-  <%= turbo_stream.append "chores", partial: "chores/chore", locals: { chore: @chore } %>
   <%= turbo_stream.replace "chore_form", partial: "chores/form", locals: { chore: Chore.new } %>
 <% end %>

@@ -5,11 +5,12 @@ x-networks-service-template: &networks
     - app
 
 x-env-service-template: &environment
-  DATABASE_URL: postgresql://postgres:postgres@dmandas-db-container/dmandas_development
+  DATABASE_URL: postgresql://postgres:postgres@dmandas-db-ctr/dmandas_development
+  REDIS_URL: redis://redis:6379
 
 services:
   app:
-    container_name: dmandas-container
+    container_name: dmandas-ctr
     build: .
     <<: *networks
     volumes:
@@ -19,12 +20,21 @@ services:
       - 3000:3000
     depends_on:
       - db
+      - redis
     environment:
       <<: *environment
 
+  redis:
+    image: redis:alpine
+    container_name: dmandas-redis-ctr
+    command: redis-server
+    <<: *networks
+    volumes:
+      - redis-data:/var/lib/redis/data
+
   db:
     image: postgres
-    container_name: dmandas-db-container
+    container_name: dmandas-db-ctr
     command: -c fsync=off --client-min-messages=warning
     <<: *networks
     volumes:
@@ -34,9 +44,10 @@ services:
 
 networks:
   app:
-    name: app
+    name: dmandas-network
     driver: bridge
 
 volumes:
   db:
   bundle:
+  redis-data:
