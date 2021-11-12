@@ -1,0 +1,142 @@
+<div class="w-64 px-8 py-4 overflow-auto bg-gray-100 border-r">
+
+</div>
+<div class="flex flex-col flex-1 min-w-0 bg-white">
+  <div class="flex-shrink-0 border-b-2 border-gray-200">
+    <header class="px-6">
+      <div class="flex items-center justify-between py-3 border-b border-gray-200">
+        <div class="flex-1">
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+              <i class="text-gray-500 fas fa-search"></i>
+            </span>
+            <input class="block py-2 pl-10 pr-4 text-sm text-gray-900 placeholder-gray-600 border border-gray-400 rounded-md"
+                   placeholder="Search"
+            />
+          </div>
+        </div>
+        <div class="flex items-center">
+          <button class="text-gray-500 far fa-bell fa-lg"></button>
+          <button class="ml-6">
+            <img class="object-cover rounded-full h-9 w-9"
+                 src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHdvbWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2.75&h=144&w=144&q=40"
+                 alt="Your profile image"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center justify-between py-2">
+        <div class="flex items-center">
+          <h2 class="text-2xl font-semibold leading-tight text-gray-900">All Issues</h2>
+          <div class="flex items-center ml-6">
+            <span class="-ml-2 border-2 border-white rounded-full">
+              <img class="object-cover rounded-full h-9 w-9"
+                   src="https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                   alt=""
+              />
+            </span>
+            <span class="-ml-2 border-2 border-white rounded-full">
+              <img class="object-cover rounded-full h-9 w-9"
+                   src="https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                   alt=""
+              />
+            </span>
+            <span class="-ml-2 border-2 border-white rounded-full">
+              <img class="object-cover rounded-full h-9 w-9"
+                   src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                   alt=""
+              />
+            </span>
+            <span class="-ml-2 border-2 border-white rounded-full">
+              <img class="object-cover rounded-full h-9 w-9"
+                   src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                   alt=""
+              />
+            </span>
+          </div>
+        </div>
+        <div class="flex">
+          <span class="inline-flex p-1 bg-gray-200 border rounded-md">
+            <button class="px-3 py-1 rounded">
+              <i class="text-gray-600 fas fa-bars fa-lg"></i>
+            </button>
+            <button class="px-2 py-1 bg-white rounded shadow">
+              <i class="text-gray-600 fas fa-columns fa-lg"></i>
+            </button>
+          </span>
+          <button class="flex items-center py-2 pl-3 pr-4 ml-5 text-sm font-medium text-white bg-gray-800 hover:bg-gray-600 rounded-md">
+            <i class="text-white fas fa-plus"></i>
+            <span class="ml-2">New Issue</span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </div>
+  <div class="flex-1 overflow-auto">
+    <main class="inline-flex p-3">
+      <div class="flex-shrink-0 p-3 bg-gray-100 w-80 rounded-md">
+        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Backlog</h3>
+        <ul class="mt-2">
+          <% 6.times do %>
+            <%= render(
+              "card_preview",
+              title: "Refactor log middleware to cover SQL",
+              img_url: "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+              date: Time.new(2021,11,02),
+              tag_color: "teal",
+              tag_text: "Feature"
+            ) %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <!-- NOTE: there is 'ml-3' in all columns except the first -->
+        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">In Progress</h3>
+        <ul class="mt-2">
+          <% 3.times do %>
+            <%= render(
+              "card_preview",
+              title: "The world isn't in your books and maps, it's out there",
+              img_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+              date: Time.new(2021,10,19),
+              tag_color: "rose",
+              tag_text: "Bug/Fix"
+            ) %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <!-- NOTE: there is 'ml-3' in all columns except the first -->
+        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Testing</h3>
+        <ul class="mt-2">
+          <% 4.times do %>
+            <%= render(
+              "card_preview",
+              title: "Would it save you a lot of time if I just gave up and went mad now?",
+              img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+              date: Time.new(2021,10,11),
+              tag_color: "amber",
+              tag_text: "Layout"
+            ) %>
+          <% end %>
+        </ul>
+      </div>
+      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <!-- NOTE: there is 'ml-3' in all columns except the first -->
+        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Ready to Delivery</h3>
+        <ul class="mt-2">
+          <% 2.times do %>
+            <%= render(
+              "card_preview",
+              title: "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space",
+              img_url: "https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144",
+              date: Time.new(2021,10,11),
+              tag_color: "fuchsia",
+              tag_text: "Bubbles"
+            ) %>
+          <% end %>
+        </ul>
+      </div>
+    </main>
+  </div>
+</div>
