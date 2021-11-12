@@ -73,69 +73,77 @@
     </header>
   </div>
   <div class="flex-1 overflow-auto">
-    <main class="inline-flex p-3">
-      <div class="flex-shrink-0 p-3 bg-gray-100 w-80 rounded-md">
-        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Backlog</h3>
-        <ul class="mt-2">
-          <% 6.times do %>
-            <%= render(
-              "card_preview",
-              title: "Refactor log middleware to cover SQL",
-              img_url: "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
-              date: Time.new(2021,11,02),
-              tag_color: "teal",
-              tag_text: "Feature"
-            ) %>
-          <% end %>
-        </ul>
+    <main class="inline-flex h-full p-3 overflow-hidden">
+      <div class="flex flex-col flex-shrink-0 bg-gray-100 w-80 rounded-md">
+        <h3 class="flex-shrink-0 px-3 pt-3 pb-1 text-sm font-medium font-semibold text-gray-700">Backlog</h3>
+        <div class="flex-1 min-h-0 overflow-y-auto">
+          <ul class="px-3 pt-1 pb-3">
+            <% 6.times do %>
+              <%= render(
+                "card_preview",
+                title: "Refactor log middleware to cover SQL",
+                img_url: "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+                date: Time.new(2021,11,02),
+                tag_color: "teal",
+                tag_text: "Feature"
+              ) %>
+            <% end %>
+          </ul>
+        </div>
       </div>
-      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <div class="flex flex-col flex-shrink-0 ml-3 bg-gray-100 w-80 rounded-md">
       <!-- NOTE: there is 'ml-3' in all columns except the first -->
-        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">In Progress</h3>
-        <ul class="mt-2">
-          <% 3.times do %>
-            <%= render(
-              "card_preview",
-              title: "The world isn't in your books and maps, it's out there",
-              img_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
-              date: Time.new(2021,10,19),
-              tag_color: "rose",
-              tag_text: "Bug/Fix"
-            ) %>
-          <% end %>
-        </ul>
+        <h3 class="flex-shrink-0 px-3 pt-3 pb-1 text-sm font-medium font-semibold text-gray-700">In Progress</h3>
+        <div class="flex-1 min-h-0 overflow-y-auto">
+          <ul class="px-3 pt-1 pb-3">
+            <% 3.times do %>
+              <%= render(
+                "card_preview",
+                title: "The world isn't in your books and maps, it's out there",
+                img_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+                date: Time.new(2021,10,19),
+                tag_color: "rose",
+                tag_text: "Bug/Fix"
+              ) %>
+            <% end %>
+          </ul>
+        </div>
       </div>
-      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <div class="flex flex-col flex-shrink-0 ml-3 bg-gray-100 w-80 rounded-md">
       <!-- NOTE: there is 'ml-3' in all columns except the first -->
-        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Testing</h3>
-        <ul class="mt-2">
-          <% 4.times do %>
-            <%= render(
-              "card_preview",
-              title: "Would it save you a lot of time if I just gave up and went mad now?",
-              img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
-              date: Time.new(2021,10,11),
-              tag_color: "amber",
-              tag_text: "Layout"
-            ) %>
-          <% end %>
-        </ul>
+        <h3 class="flex-shrink-0 px-3 pt-3 pb-1 text-sm font-medium font-semibold text-gray-700">Testing</h3>
+        <div class="flex-1 min-h-0 overflow-y-auto">
+          <ul class="px-3 pt-1 pb-3">
+            <% 4.times do %>
+              <%= render(
+                "card_preview",
+                title: "Would it save you a lot of time if I just gave up and went mad now?",
+                img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
+                date: Time.new(2021,10,11),
+                tag_color: "amber",
+                tag_text: "Layout"
+              ) %>
+            <% end %>
+          </ul>
+        </div>
       </div>
-      <div class="flex-shrink-0 p-3 ml-3 bg-gray-100 w-80 rounded-md">
+      <div class="flex flex-col flex-shrink-0 ml-3 bg-gray-100 w-80 rounded-md">
       <!-- NOTE: there is 'ml-3' in all columns except the first -->
-        <h3 class="ml-1 text-sm font-medium font-semibold text-gray-700">Ready to Delivery</h3>
-        <ul class="mt-2">
-          <% 2.times do %>
-            <%= render(
-              "card_preview",
-              title: "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space",
-              img_url: "https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144",
-              date: Time.new(2021,10,11),
-              tag_color: "fuchsia",
-              tag_text: "Bubbles"
-            ) %>
-          <% end %>
-        </ul>
+        <h3 class="flex-shrink-0 px-3 pt-3 pb-1 text-sm font-medium font-semibold text-gray-700">Ready to Delivery</h3>
+        <div class="flex-1 min-h-0 overflow-y-auto">
+          <ul class="px-3 pt-1 pb-3">
+            <% 2.times do %>
+              <%= render(
+                "card_preview",
+                title: "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space",
+                img_url: "https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144",
+                date: Time.new(2021,10,11),
+                tag_color: "fuchsia",
+                tag_text: "Bubbles"
+              ) %>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </main>
   </div>
