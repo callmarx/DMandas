@@ -30,6 +30,7 @@ group :development do
   gem "rack-mini-profiler", "~> 2.0"
   gem "listen", "~> 3.3"
   gem "spring"
+  gem "solargraph", require: false
   gem "brakeman"
   gem "database_cleaner"
   gem "rubocop", require: false
