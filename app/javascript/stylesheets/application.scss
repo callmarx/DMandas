@@ -1,3 +1,16 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+.work-column-first {
+  @apply flex flex-col flex-shrink-0 bg-gray-100 w-96 rounded-md;
+}
+
+.work-column {
+  // NOTE: there is 'ml-3' in all columns except the first
+  @apply ml-3 work-column-first;
+}
+
+.work-column-title {
+  @apply flex-shrink-0 pt-3 pb-1 pl-4 pr-3 text-sm font-medium font-semibold text-gray-700;
+}

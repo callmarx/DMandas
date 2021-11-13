@@ -1,12 +1,14 @@
 <div class="w-full">
-  <div class="flex justify-between items-center">
-    <h1 class="text-lg font-bold text-4xl">Chores</h1>
+  <div class="flex items-center justify-between">
+    <h1 class="text-lg text-4xl font-bold">Chores</h1>
     <%= link_to "New chore", new_chore_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
 
   <%= turbo_stream_from "chores" %>
   <div id="chores" class="w-full h-2/4">
-    <%= render @chores %>
+    <%= turbo_frame_tag "chores" do %>
+      <%= render @chores %>
+    <% end %>
   </div>
 
   <div id="chore_form" class="w-full h-2/4">
