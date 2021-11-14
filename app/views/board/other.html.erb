@@ -1,8 +1,8 @@
-<div id="board" class="flex h-screen">
+<div id="board" class="flex h-screen bg-wood-200">
   <div :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
-    class="fixed inset-y-0 left-0 z-30 w-32 overflow-auto bg-gray-400 border-r transform duration-300 ease-linear lg:translate-x-0 lg:static">
+    class="fixed inset-y-0 left-0 z-30 w-32 overflow-auto border-r bg-wood-550 transform duration-300 ease-linear lg:translate-x-0 lg:static">
     <div class="flex justify-end mt-4 mr-4 lg:hidden"><!-- NOTE: this is the sidebar close button for responsive -->
-      <button @click="sidebarOpen = false" class="w-8 h-8 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out">
+      <button @click="sidebarOpen = false" class="w-8 h-8 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
           <g><path fill="none" d="M0 0H24V24H0z"></path><path d="M21 18v2H3v-2h18zM6.596 3.904L8.01 5.318 4.828 8.5l3.182 3.182-1.414 1.414L2 8.5l4.596-4.596zM21 11v2h-9v-2h9zm0-7v2h-9V4h9z"/></g>
         </svg>
@@ -10,19 +10,19 @@
     </div>
     <div class="flex flex-col flex-shrink-0 mt-4">
       <!-- Menu > Home -->
-      <button class="w-12 h-12 mx-auto my-6 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out">
+      <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg fill="currentColor" viewBox="0 0 576 512">
           <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"/>
         </svg>
       </button>
       <!-- Menu > Time/History -->
-      <button class="w-12 h-12 mx-auto my-6 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out">
+      <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg fill="currentColor" viewBox="0 0 512 512">
           <path d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"/>
         </svg>
       </button>
       <!-- Menu > Ideia/epics -->
-      <button class="w-12 h-12 mx-auto my-6 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out">
+      <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg fill="currentColor" viewBox="0 0 24 24">
           <g>
             <path fill="none" d="M0 0h24v24H0z"/>
@@ -31,21 +31,21 @@
         </svg>
       </button>
       <!-- Menu > statistics -->
-      <button class="w-12 h-12 mx-auto my-6 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out">
+      <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M0 0h1v15h15v1H0V0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5z"/>
         </svg>
       </button>
       <!-- Menu > Configs -->
-      <button class="w-12 h-12 mx-auto my-6 text-gray-200 cursor-pointer hover:text-gray-900 transition-all duration-500 ease-in-out">
+      <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-500 ease-in-out">
         <svg fill="currentColor" viewBox="0 0 16 16">
           <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
         </svg>
       </button>
     </div>
   </div>
-  <div class="flex flex-col flex-1 min-w-0 bg-white">
-    <div class="flex-shrink-0 border-b border-gray-200">
+  <div class="flex flex-col flex-1 min-w-0 bg-wood-200">
+    <div class="flex-shrink-0 border-b border-wood-400">
       <header>
         <div class="px-6">
           <div class="flex items-center justify-between py-3 border-b border-gray-200">

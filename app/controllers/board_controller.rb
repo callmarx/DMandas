@@ -19,4 +19,6 @@ class BoardController < ApplicationController
     #   body: "something to inform"
     # }
   end
+
+  def other; end
 end
