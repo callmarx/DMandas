@@ -1,6 +1,6 @@
 <div id="board" class="flex h-screen bg-wood-200">
   <div :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
-    class="fixed inset-y-0 left-0 z-30 w-32 overflow-auto border-r bg-wood-550 transform duration-300 ease-linear lg:translate-x-0 lg:static">
+    class="fixed inset-y-0 left-0 z-30 w-32 overflow-auto bg-wood-550 transform duration-300 ease-linear lg:translate-x-0 lg:static">
     <div class="flex justify-end mt-4 mr-4 lg:hidden"><!-- NOTE: this is the sidebar close button for responsive -->
       <button @click="sidebarOpen = false" class="w-8 h-8 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
@@ -21,13 +21,10 @@
           <path d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"/>
         </svg>
       </button>
-      <!-- Menu > Ideia/epics -->
+      <!-- Menu > projects/epics -->
       <button class="w-12 h-12 mx-auto my-6 cursor-pointer text-wood-150 hover:text-wood-800 transition-all duration-600 ease-in-out">
-        <svg fill="currentColor" viewBox="0 0 24 24">
-          <g>
-            <path fill="none" d="M0 0h24v24H0z"/>
-            <path d="M7.941 18c-.297-1.273-1.637-2.314-2.187-3a8 8 0 1 1 12.49.002c-.55.685-1.888 1.726-2.185 2.998H7.94zM16 20v1a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-1h8zm-3-9.995V6l-4.5 6.005H11v4l4.5-6H13z"/>
-          </g>
+        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
+          <path d="M383.88,287.82l64-192H338.47a70.2,70.2,0,0,1-66.59-48,70.21,70.21,0,0,0-66.6-48H63.88l64,288Zm-384,192a32,32,0,0,0,32,32h448a32,32,0,0,0,32-32v-64H-.12Zm480-256H438.94l-21.33,64h14.27a16,16,0,0,1,0,32h-352a16,16,0,1,1,0-32H95.09l-14.22-64h-49a32,32,0,0,0-32,32v128h512v-128A32,32,0,0,0,479.88,223.82Z"/>
         </svg>
       </button>
       <!-- Menu > statistics -->
@@ -48,27 +45,27 @@
     <div class="flex-shrink-0 border-b border-wood-400">
       <header>
         <div class="px-6">
-          <div class="flex items-center justify-between py-3 border-b border-gray-200">
+          <div class="flex items-center justify-between py-3 border-b border-wood-400">
             <div class="flex flex-1 min-w-0">
               <!-- NOTE: this is the sidebar open button for responsive -->
-              <button @click="sidebarOpen = true" class="flex-shrink-0 mr-3 text-gray-500 cursor-pointer hover:text-gray-900 transition-all duration-600 ease-in-out lg:hidden">
+              <button @click="sidebarOpen = true" class="flex-shrink-0 mr-3 cursor-pointer text-wood-750 hover:text-wood-900 transition-all duration-600 ease-in-out lg:hidden">
                 <svg class="w-8 h-8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
                   <g><path fill="none" d="M0 0H24V24H0z"/><path d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z"/></g>
                 </svg>
               </button>
               <div class="relative flex-shrink w-64"><!-- Search icon and input area -->
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3">
-                  <svg class="w-4 h-4 text-gray-500" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                  <svg class="w-4 h-4 text-wood-700" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                   </svg>
                 </div>
-                <input class="block w-full py-2 pl-10 pr-4 text-sm text-gray-900 placeholder-gray-600 border border-gray-400 rounded-md"
+                <input class="block w-full py-2 pl-10 pr-4 text-sm text-gray-900 placeholder-gray-600 border shadow-md border-wood-400 bg-wood-50 rounded-md focus:ring-2 focus:ring-wood-600"
                        placeholder="Search"
                 />
               </div>
             </div>
             <div class="flex items-center flex-shrink-0">
-            <button class="w-6 h-6 text-gray-500"> <!-- Notifications -->
+            <button class="w-7 h-7 text-wood-750"> <!-- Notifications -->
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
                   <path d="M256 480a80.09 80.09 0 0073.3-48H182.7a80.09 80.09 0 0073.3 48zm144-192v-60.53C400 157 372.64 95.61 304 80l-8-48h-80l-8 48c-68.88 15.61-96 76.76-96 147.47V288l-48 64v48h384v-48z"/>
                 </svg>
@@ -82,28 +79,34 @@
             </div>
           </div>
           <div class="flex items-center justify-between py-2">
+            <button class="flex items-center py-2 pl-3 pr-4 text-sm font-medium shadow-xl text-wood-50 bg-wood-750 hover:bg-wood-850 rounded-md">
+              <svg class="w-5 h-5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
+                <path fill="none" stroke-width="2" d="M11,9 L19,9 M15,13 L15,5 M17,17 L17,23 L1,23 L1,7 L1,7 L7,7 M7,1 L23,1 L23,17 L7,17 L7,1 Z"/>
+              </svg>
+              <span class="ml-2">New Issue</span>
+            </button>
             <div class="sm:flex sm:items-center">
               <h2 class="text-2xl font-semibold leading-tight text-gray-900">All Issues</h2>
               <div class="flex items-center mt-1 sm:mt-0 sm:ml-6">
-                <span class="-ml-2 border-2 border-white rounded-full">
+                <span class="-ml-2 border-2 rounded-full border-wood-100">
                   <img class="object-cover rounded-full h-9 w-9"
                        src="https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
                        alt=""
                   />
                 </span>
-                <span class="-ml-2 border-2 border-white rounded-full">
+                <span class="-ml-2 border-2 rounded-full border-wood-100">
                   <img class="object-cover rounded-full h-9 w-9"
                        src="https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144"
                        alt=""
                   />
                 </span>
-                <span class="-ml-2 border-2 border-white rounded-full">
+                <span class="-ml-2 border-2 rounded-full border-wood-100">
                   <img class="object-cover rounded-full h-9 w-9"
                        src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
                        alt=""
                   />
                 </span>
-                <span class="-ml-2 border-2 border-white rounded-full">
+                <span class="-ml-2 border-2 rounded-full border-wood-100">
                   <img class="object-cover rounded-full h-9 w-9"
                        src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
                        alt=""
@@ -111,51 +114,19 @@
                 </span>
               </div>
             </div>
-            <div class="flex">
-              <span class="hidden p-1 bg-gray-200 border sm:inline-flex rounded-md">
-                <button class="px-3 py-1 rounded">
-                  <svg class="w-6 h-6 text-gray-600" stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                  </svg>
-                </button>
-                <button class="px-2 py-1 bg-white rounded shadow">
-                  <svg class="w-6 h-6 text-gray-600" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-                  </svg>
-                </button>
-              </span>
-              <button class="flex items-center py-2 pl-3 pr-4 ml-5 text-sm font-medium text-white bg-gray-800 hover:bg-gray-600 rounded-md">
-                <i class="text-white fas fa-plus"></i>
-                <span class="ml-2">New Issue</span>
-              </button>
-            </div>
           </div>
-        </div>
-        <div class="flex p-1 px-4 bg-gray-200 border-t sm:hidden">
-          <button class="inline-flex items-center justify-center w-1/2 px-3 py-1 rounded">
-            <svg class="w-6 h-6 text-gray-600" stroke="currentColor" fill="currentColor" stroke-width="1" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-            </svg>
-            <span class="ml-2 font-medium font-semibold text-gray-600">List</span>
-          </button>
-          <button class="inline-flex items-center justify-center w-1/2 px-2 py-1 bg-white rounded shadow">
-            <svg class="w-6 h-6 text-gray-600" stroke="currentColor" fill="none" stroke-width="0" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-            </svg>
-            <span class="ml-2 font-medium font-semibold text-gray-600">Board</span>
-          </button>
         </div>
       </header>
     </div>
     <div class="flex-1 overflow-auto">
       <main class="inline-flex h-full p-3 overflow-hidden">
-        <div class="work-column-first">
+        <div class="flex flex-col flex-shrink-0 bg-wood-100 w-100 rounded-md hover:bg-wood-300 transition-all duration-600 ease-linear">
           <h3 class="work-column-title">Backlog</h3>
           <div class="flex-1 min-h-0 overflow-y-auto">
-            <ul class="px-3 pt-1 pb-3">
+            <ul class="px-5 pt-1 pb-3">
               <% 6.times do %>
                 <%= render(
-                  "card_preview",
+                  "other_card_preview",
                   title: "Refactor log middleware to cover SQL",
                   img_url: "https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
                   date: Time.new(2021,11,02),
@@ -166,13 +137,13 @@
             </ul>
           </div>
         </div>
-        <div class="work-column">
+        <div class="flex flex-col flex-shrink-0 ml-3 bg-wood-100 w-100 rounded-md hover:bg-wood-300 transition-all duration-600 ease-linear">
           <h3 class="work-column-title">In Progress</h3>
           <div class="flex-1 min-h-0 overflow-y-auto">
-            <ul class="px-3 pt-1 pb-3">
+            <ul class="px-5 pt-1 pb-3">
               <% 3.times do %>
                 <%= render(
-                  "card_preview",
+                  "other_card_preview",
                   title: "The world isn't in your books and maps, it's out there",
                   img_url: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
                   date: Time.new(2021,10,19),
@@ -183,13 +154,13 @@
             </ul>
           </div>
         </div>
-        <div class="work-column">
+        <div class="flex flex-col flex-shrink-0 ml-3 bg-wood-100 w-100 rounded-md hover:bg-wood-300 transition-all duration-600 ease-linear">
           <h3 class="work-column-title">Testing</h3>
           <div class="flex-1 min-h-0 overflow-y-auto">
-            <ul class="px-3 pt-1 pb-3">
+            <ul class="px-5 pt-1 pb-3">
               <% 4.times do %>
                 <%= render(
-                  "card_preview",
+                  "other_card_preview",
                   title: "Would it save you a lot of time if I just gave up and went mad now?",
                   img_url: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144",
                   date: Time.new(2021,10,11),
@@ -200,13 +171,13 @@
             </ul>
           </div>
         </div>
-        <div class="work-column">
+        <div class="flex flex-col flex-shrink-0 ml-3 bg-wood-100 w-100 rounded-md hover:bg-wood-300 transition-all duration-600 ease-linear">
           <h3 class="work-column-title">Ready to Delivery</h3>
           <div class="flex-1 min-h-0 overflow-y-auto">
-            <ul class="px-3 pt-1 pb-3">
+            <ul class="px-5 pt-1 pb-3">
               <% 2.times do %>
                 <%= render(
-                  "card_preview",
+                  "other_card_preview",
                   title: "Space is big. You just won't believe how vastly, hugely, mind-bogglingly big it is. I mean, you may think it's a long way down the road to the chemist's, but that's just peanuts to space",
                   img_url: "https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144",
                   date: Time.new(2021,10,11),

@@ -7,6 +7,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      spacing: {
+        '100': '25rem',
+        '104': '26rem',
+        '108': '27rem',
+      },
       colors: {
         amber: colors.amber,
         blueGray: colors.blueGray,
