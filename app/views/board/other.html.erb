@@ -42,12 +42,12 @@
     </div>
   </div>
   <div class="flex flex-col flex-1 min-w-0 bg-wood-200">
-    <div class="flex-shrink-0 border-b border-wood-400">
+    <div class="flex-shrink-0">
       <header>
         <div class="px-6">
           <div class="flex items-center justify-between py-3 border-b border-wood-400">
             <div class="flex flex-1 min-w-0">
-              <!-- NOTE: this is the sidebar open button for responsive -->
+              <!-- Responsive: button to open sidebar menu for mobile -->
               <button @click="sidebarOpen = true" class="flex-shrink-0 mr-3 cursor-pointer text-wood-750 hover:text-wood-900 transition-all duration-600 ease-in-out lg:hidden">
                 <svg class="w-8 h-8" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
                   <g><path fill="none" d="M0 0H24V24H0z"/><path d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z"/></g>
@@ -63,14 +63,50 @@
                        placeholder="Search"
                 />
               </div>
+              <button class="flex items-center px-3 py-2 ml-2 text-sm font-medium shadow-xl text-wood-50 bg-wood-750 hover:bg-wood-850 rounded-md">
+                <svg class="w-5 h-5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
+                  <path fill="none" stroke-width="2" d="M11,9 L19,9 M15,13 L15,5 M17,17 L17,23 L1,23 L1,7 L1,7 L7,7 M7,1 L23,1 L23,17 L7,17 L7,1 Z"/>
+                </svg>
+                <span class="hidden ml-2 lg:block">New chore</span>
+              </button>
+              <!-- Responsive: this "Requesters" will be on next line for mobile -->
+              <div class="hidden md:flex md:items-center md:ml-3">
+                <h2 class="text-2xl font-semibold text-gray-900">Requesters</h2>
+                <div class="flex items-center ml-3">
+                  <span class="-ml-2 border-2 rounded-full border-wood-100">
+                    <img class="object-cover rounded-full h-9 w-9"
+                         src="https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                         alt=""
+                    />
+                  </span>
+                  <span class="-ml-2 border-2 rounded-full border-wood-100">
+                    <img class="object-cover rounded-full h-9 w-9"
+                         src="https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                         alt=""
+                    />
+                  </span>
+                  <span class="-ml-2 border-2 rounded-full border-wood-100">
+                    <img class="object-cover rounded-full h-9 w-9"
+                         src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                         alt=""
+                    />
+                  </span>
+                  <span class="-ml-2 border-2 rounded-full border-wood-100">
+                    <img class="object-cover rounded-full h-9 w-9"
+                         src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                         alt=""
+                    />
+                  </span>
+                </div>
+              </div>
             </div>
-            <div class="flex items-center flex-shrink-0">
-            <button class="w-7 h-7 text-wood-750"> <!-- Notifications -->
+            <div class="flex items-center flex-shrink-0 ml-1">
+              <button class="w-7 h-7 text-wood-750"> <!-- Notifications -->
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512">
                   <path d="M256 480a80.09 80.09 0 0073.3-48H182.7a80.09 80.09 0 0073.3 48zm144-192v-60.53C400 157 372.64 95.61 304 80l-8-48h-80l-8 48c-68.88 15.61-96 76.76-96 147.47V288l-48 64v48h384v-48z"/>
                 </svg>
               </button>
-              <button class="ml-3"><!-- Profile and self gravatar/photo -->
+              <button class="ml-2"><!-- Profile and self gravatar/photo -->
                 <img class="object-cover rounded-full h-9 w-9"
                      src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHdvbWFufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2.75&h=144&w=144&q=40"
                      alt="Your profile image"
@@ -78,41 +114,34 @@
               </button>
             </div>
           </div>
-          <div class="flex items-center justify-between py-2">
-            <button class="flex items-center py-2 pl-3 pr-4 text-sm font-medium shadow-xl text-wood-50 bg-wood-750 hover:bg-wood-850 rounded-md">
-              <svg class="w-5 h-5" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24">
-                <path fill="none" stroke-width="2" d="M11,9 L19,9 M15,13 L15,5 M17,17 L17,23 L1,23 L1,7 L1,7 L7,7 M7,1 L23,1 L23,17 L7,17 L7,1 Z"/>
-              </svg>
-              <span class="ml-2">New Issue</span>
-            </button>
-            <div class="sm:flex sm:items-center">
-              <h2 class="text-2xl font-semibold leading-tight text-gray-900">All Issues</h2>
-              <div class="flex items-center mt-1 sm:mt-0 sm:ml-6">
-                <span class="-ml-2 border-2 rounded-full border-wood-100">
-                  <img class="object-cover rounded-full h-9 w-9"
-                       src="https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
-                       alt=""
-                  />
-                </span>
-                <span class="-ml-2 border-2 rounded-full border-wood-100">
-                  <img class="object-cover rounded-full h-9 w-9"
-                       src="https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144"
-                       alt=""
-                  />
-                </span>
-                <span class="-ml-2 border-2 rounded-full border-wood-100">
-                  <img class="object-cover rounded-full h-9 w-9"
-                       src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
-                       alt=""
-                  />
-                </span>
-                <span class="-ml-2 border-2 rounded-full border-wood-100">
-                  <img class="object-cover rounded-full h-9 w-9"
-                       src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
-                       alt=""
-                  />
-                </span>
-              </div>
+          <!-- Responsive: "Requesters" on other line for mobile -->
+          <div class="flex flex-shrink-0 py-2 border-b justify-items-start border-wood-400 md:hidden">
+            <h2 class="hidden text-2xl font-semibold text-gray-900 xs:block">Requesters</h2>
+            <div class="flex items-center ml-3">
+              <span class="-ml-2 border-2 rounded-full border-wood-100">
+                <img class="object-cover rounded-full h-9 w-9"
+                     src="https://images.unsplash.com/photo-1534180477871-5d6cc81f3920?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                     alt=""
+                />
+              </span>
+              <span class="-ml-2 border-2 rounded-full border-wood-100">
+                <img class="object-cover rounded-full h-9 w-9"
+                     src="https://images.unsplash.com/photo-1608681299041-cc19878f79f1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                     alt=""
+                />
+              </span>
+              <span class="-ml-2 border-2 rounded-full border-wood-100">
+                <img class="object-cover rounded-full h-9 w-9"
+                     src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                     alt=""
+                />
+              </span>
+              <span class="-ml-2 border-2 rounded-full border-wood-100">
+                <img class="object-cover rounded-full h-9 w-9"
+                     src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&h=144&w=144"
+                     alt=""
+                />
+              </span>
             </div>
           </div>
         </div>
