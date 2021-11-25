@@ -1,0 +1,7 @@
+<%= turbo_stream.append "flash-notifications" do %>
+  <% flash.each do |type, msg| %>
+    <%= render NotificationComponent.new(type: type, data: msg) %>
+  <% end %>
+<% end %>
+
+<%= yield %>

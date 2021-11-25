@@ -6,9 +6,7 @@
 
   <%= turbo_stream_from "chores" %>
   <div id="chores" class="w-full h-2/4">
-    <%= turbo_frame_tag "chores" do %>
-      <%= render @chores %>
-    <% end %>
+    <%= render @chores %>
   </div>
 
   <div id="chore_form" class="w-full h-2/4">
